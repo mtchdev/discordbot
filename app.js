@@ -10,6 +10,19 @@ client.on("ready", () => {
 client.on('message', message => {
     var args = message.content.split(/[ ]+/);
 
+    if (msg.content === prefix + 'info'){
+        const myEmbed = new Discord.RichEmbed()
+                .setAuthor("Hexadecimal", "https://i.imgur.com/k7AZ2EI.png")
+                .setColor(16107290)
+                .setTimestamp()
+                .addField("Version", "0.1", true)
+                .addField("Author", "whenofficial\nArcadex", true)
+                .addField("Description", "error", true);
+        
+        msg.channel.send({ embed: myEmbed });
+        
+            }
+
     //shit goes here
     if (message.content === settings.prefix + 'info') {
         message.channel.send('Hey! I\'m just a lonely bot.');
