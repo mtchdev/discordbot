@@ -11,7 +11,9 @@ client.on('message', message => {
     var args = message.content.split(/[ ]+/);
 
     //shit goes here
-
+    if(message.content === settings.prefix + 'hello'){
+        message.reply('hey kid');
+    }
 
 });
 
