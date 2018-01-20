@@ -11,8 +11,9 @@ client.on('message', message => {
     var args = message.content.split(/[ ]+/);
 
     //shit goes here
-    if(message.content === settings.prefix + 'hello'){
-        message.reply('hey kid');
+    if(message.content === settings.prefix + 'info'){
+        message.channel.send('Hey! I\'m just a lonely bot.');
+        console.log('sent message to ' + message.author);
     }
 
 });
