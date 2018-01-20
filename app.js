@@ -15,6 +15,13 @@ client.on('message', message => {
         message.channel.send('Hey! I\'m just a lonely bot.');
         console.log('sent message to ' + message.author);
     }
+    if(message.content === settings.prefix + 'rank'){
+        if(message.member.roles.find("name", "cunt")){
+            message.reply('you are a cunt');
+        } else {
+            message.reply('you are a good boy');
+        }
+    }
 
 });
 
